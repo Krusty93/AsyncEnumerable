@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AsyncEnumerable.Client.EnumerablePage"
+             Title="EnumerablePage">
+
+    <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+        <Button
+            x:Name="LoadBtn"
+            Text="Simulate data loading"
+            Command="{Binding LoadCommand}"
+            HorizontalOptions="Center" />
+
+        <Label x:Name="TimerLbl"
+               Text="{Binding Text}"
+               HorizontalOptions="Center"
+               FontSize="18"/>
+
+        <ListView x:Name="ResultList"
+                  ItemsSource="{Binding Results}"
+                  BackgroundColor="Green"
+                      HorizontalOptions="Center">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Label Text="{Binding}"
+                               FontAttributes="Bold" />
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+    </VerticalStackLayout>
+</ContentPage>

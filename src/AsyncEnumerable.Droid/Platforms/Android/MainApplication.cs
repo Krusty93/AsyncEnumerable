@@ -1,7 +1,7 @@
 ﻿using Android.App;
 using Android.Runtime;
 
-namespace AsyncEnumerable.Droid
+namespace AsyncEnumerable.Client.Platforms.Android
 {
     [Application]
     public class MainApplication : MauiApplication

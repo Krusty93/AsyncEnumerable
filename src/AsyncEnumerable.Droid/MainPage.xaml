@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="AsyncEnumerable.Droid.MainPage">
+             x:Class="AsyncEnumerable.Client.MainPage">
 
     <ScrollView>
         <VerticalStackLayout
@@ -16,12 +16,6 @@
                 HorizontalOptions="Center" />
 
             <Label
-                Text="Hello, World!"
-                SemanticProperties.HeadingLevel="Level1"
-                FontSize="32"
-                HorizontalOptions="Center" />
-
-            <Label
                 Text="Welcome to .NET Multi-platform App UI"
                 SemanticProperties.HeadingLevel="Level2"
                 SemanticProperties.Description="Welcome to dot net Multi platform App U I"
@@ -33,6 +27,30 @@
                 Text="Click me"
                 SemanticProperties.Hint="Counts the number of times you click"
                 Clicked="OnCounterClicked"
+                HorizontalOptions="Center" />
+
+            <Button
+                x:Name="EnumerableBtn"
+                Text="Enumerable"
+                Clicked="OnEnumerableBtn_Clicked"
+                HorizontalOptions="Center" />
+
+            <Button
+                x:Name="AsyncEnumerableBtn"
+                Text="IAsyncEnumerable"
+                Clicked="OnAsyncEnumerableBtn_Clicked"
+                HorizontalOptions="Center" />
+
+            <Button
+                x:Name="SlowPaginationBtn"
+                Text="Slow Pagination"
+                Clicked="OnSlowPaginationBtn_Clicked"
+                HorizontalOptions="Center" />
+
+            <Button
+                x:Name="QuickPaginationBtn"
+                Text="Quick Pagination"
+                Clicked="OnQuickPaginationBtn_Clicked"
                 HorizontalOptions="Center" />
 
         </VerticalStackLayout>
